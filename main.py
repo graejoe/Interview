@@ -12,6 +12,8 @@ def read_root(q: str = None):
         return "PONG"
     if(query == 'What is your quest?'):
         return "coding"
+    if(query == 'Source code for this exercise?'):
+        return "https://github.com/graejoe/Interview"
 
     if(q[0].isnumeric()):
         sum = 0
