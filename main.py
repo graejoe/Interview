@@ -10,7 +10,7 @@ def read_root(q: str = None):
         return "Joe Graefe"
     if(query == 'PING'):
         return "PONG"
-    if(query == "What is your quest?"):
+    if(query == 'What is your quest?'):
         return "coding"
 
     if(q[0].isnumeric()):
@@ -20,6 +20,8 @@ def read_root(q: str = None):
             if(number.isnumeric()):
                 sum += int(number)
         return sum
+    if(q[0] == '<'):
+        return "Hi"
     else:
         listvowels = ['a', 'e', 'i', 'o', 'u']
         words = q.split(' ')
