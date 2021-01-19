@@ -37,7 +37,7 @@ def read_root(q: str = None):
         for i in range(5):
             answer.append(odd[i] + even[i])
 
-        return answer
+        return ' '.join([str(item) for item in answer])
     else:
         listvowels = ['a', 'e', 'i', 'o', 'u']
         words = q.split(' ')
