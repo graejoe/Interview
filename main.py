@@ -23,7 +23,21 @@ def read_root(q: str = None):
                 sum += int(number)
         return sum
     if(q[0] == '<'):
-        return "Hi"
+        combo = list(map(int, q.lstrip('< ').rstrip(' >').split(' ')))
+        even = list()
+        odd = list()
+        answer = list()
+        for number in combo:
+            if number % 2 == 0:
+                even.append(number)
+            else:
+                odd.append(number)
+        odd.sort()
+        even.sort(reverse=True)
+        for i in range(5):
+            answer.append(odd[i] + even[i])
+
+        return answer
     else:
         listvowels = ['a', 'e', 'i', 'o', 'u']
         words = q.split(' ')
